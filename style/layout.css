@@ -1,0 +1,95 @@
+/*
+RULES: Here is the place for layout. You are welcome to edit positions, borders, etc,... but NOT FOR FONTS or COLORS
+*/
+
+/*
+PREVENT DEFAULT BEHAVIOR
+*/
+body{
+	position: relative;
+	top: 50px;
+}
+
+body, h1, h2, h3, h4, h5, h6{
+	padding: 0;
+	margin: 0;
+}
+/*
+END OF PREVENT DEFAULT BEHAVIOR
+*/
+.main-header{
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+}
+
+
+.main-header>.main-header-container{
+	width: 90%;
+	margin: auto;
+	position: relative;
+}
+
+.main-header>.main-header-container>.main-header-title{
+	font-size: 1.3rem;
+}
+
+.main-header>.main-header-container>.main-header-element{
+	display: inline-block;
+	line-height: 50px;
+}
+
+.main-header>.main-header-container>.main-header-menu{
+	position: absolute;
+	right: 0;
+}
+
+.menu>.menu-element{
+
+}
+.menu-element:nth-child(n+2)::before{
+	content: '|';
+	font-size: 12px;
+	margin: 10px;
+}
+
+.front-page{
+	position: relative;
+}
+
+
+.front-page>.front-page-container{
+	bottom: 0;
+	right: 0;
+	display: inline-block;
+	position: absolute;
+}
+
+
+.circle{
+	border-radius: 50%
+}
+
+.full-viewport{
+	height: calc(100vh - 50px);
+	width: 100%;
+}
+
+.grid-row{
+	width: 100%;
+}
+
+.grid-col-12{ width: 100%; display: block;}
+.grid-col-11{ width: calc(calc(100% / 12) * 11); display: inline-block; float:left; clear:right;}
+.grid-col-10{ width: calc(calc(100% / 12) * 10); display: inline-block; float:left; clear:right;}
+.grid-col-9{ width: calc(calc(100% / 12) * 9); display: inline-block; float:left; clear:right;}
+.grid-col-8{ width: calc(calc(100% / 12) * 8); display: inline-block; float:left; clear:right;}
+.grid-col-7{ width: calc(calc(100% / 12) * 7); display: inline-block; float:left; clear:right;}
+.grid-col-6{ width: calc(calc(100% / 12) * 6); display: inline-block; float:left; clear:right;}
+.grid-col-5{ width: calc(calc(100% / 12) * 5); display: inline-block; float:left; clear:right;}
+.grid-col-4{ width: calc(calc(100% / 12) * 4); display: inline-block; float:left; clear:right;}
+.grid-col-3{ width: calc(calc(100% / 12) * 3); display: inline-block; float:left; clear:right;}
+.grid-col-2{ width: calc(calc(100% / 12) * 2); display: inline-block; float:left; clear:right;}
+.grid-col-1{ width: calc(calc(100% / 12) * 1); display: inline-block; float:left; clear:right;}
+
+

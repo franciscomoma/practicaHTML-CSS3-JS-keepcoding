@@ -1,0 +1,19 @@
+/*
+RULES: Here is the place for colors, fonts, background images but NOT FOR LAYOUT.
+*/
+a{
+    color: initial;
+    text-decoration: initial;
+}
+
+.main-header{
+	background-color: rgba(255,255,255,0.9)
+}
+
+.menu-element:nth-child(n+2)::before{
+	color: #DDDDDD;
+}
+
+#front-page{
+	background-color: #FF7777;
+}
