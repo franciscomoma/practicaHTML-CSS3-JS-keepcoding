@@ -16,27 +16,27 @@ var SmoothScroll = function(event){
 	speed = VERY_FAST
 
 	var scroll = function(){
-		if(window.scrollY < nextElement.offsetTop){
-			window.scrollTo(window.scrollX, window.scrollY+speed)
+		if(document.documentElement.scrollTop < nextElement.offsetTop){
+			window.scrollTo(window.scrollX, document.documentElement.scrollTop+speed)
 		}
 
-		if(window.scrollY > nextElement.offsetTop){
-			window.scrollTo(window.scrollX, window.scrollY-speed)
+		if(document.documentElement.scrollTop > nextElement.offsetTop){
+			window.scrollTo(window.scrollX, document.documentElement.scrollTop-speed)
 		}
 
-		if(window.scrollY == nextElement.offsetTop || Math.abs(window.scrollY - nextElement.offsetTop)<speed){
+		if(document.documentElement.scrollTop == nextElement.offsetTop || Math.abs(document.documentElement.scrollTop - nextElement.offsetTop)<speed){
 			window.scrollTo(window.scrollX, nextElement.offsetTop);
 			clearInterval(lastInterval);
 		}
 
-		if( Math.abs(window.scrollY - nextElement.offsetTop) < 200 && speed == FAST)
+		if( Math.abs(document.documentElement.scrollTop - nextElement.offsetTop) < 200 && speed == FAST)
 		{
 			clearInterval(lastInterval);
 			speed = SLOW;
 			lastInterval = setInterval(scroll,20)
 		}
 
-		if( Math.abs(window.scrollY - nextElement.offsetTop) < 750 && speed == VERY_FAST)
+		if( Math.abs(document.documentElement.scrollTop - nextElement.offsetTop) < 750 && speed == VERY_FAST)
 		{
 			clearInterval(lastInterval);
 			speed = FAST;
