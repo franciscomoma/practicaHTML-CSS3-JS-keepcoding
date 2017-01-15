@@ -1,6 +1,21 @@
 /*
 RULES: Here is the place for colors, fonts, background images but NOT FOR LAYOUT.
 */
+
+@font-face {
+  font-family: 'FiraSansCondensed-Bold';
+  src: url('../resources/fonts/FiraSansCondensed-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'FiraSansCondensed-Regular';
+  src: url('../resources/fonts/FiraSansCondensed-Regular.ttf');
+}
+
+*{
+	font-family: 'FiraSansCondensed-Regular', sans-serif;
+}
+
 a{
     color: initial;
     text-decoration: initial;
@@ -15,5 +30,39 @@ a{
 }
 
 #front-page{
-	background-color: #FF7777;
+	background-image: url(../resources/img/front.jpg);
+    background-position: center;
+    background-size: cover;	
+}
+
+.main-section-title{
+	font-size: 2.5em;
+	font-family: 'FiraSansCondensed-Bold', sans-serif;
+	font-weight: bold;
+}
+
+.soft-green{
+	background-color: rgb(227, 251, 113);
+}
+
+.hard-purple{
+	background-color: rgb(108, 0, 108);
+	color: #FFFFFF;
+}
+
+.soft-pink{
+	background-color: rgb(210, 95, 210);
+}
+
+img{
+animation: cssAnimation 1s ease-in;
+}
+
+.author{
+	font-weight: bold
+}
+
+@keyframes cssAnimation {
+	to { transform: scale(1)}
+	from { transform: scale(0.8)}
 }

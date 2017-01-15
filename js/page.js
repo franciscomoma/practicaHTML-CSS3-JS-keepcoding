@@ -1,25 +1,23 @@
-$(document).on('submit', '#contact-form', function(e){
-    e.preventDefault();
+function getQuote(){
+    $.ajax({
+        crossDomain: true,
+        contentType: "jsonp",
+        dataType: "jsonp",
+        method: "GET",
+        url: 'http://api.forismatic.com/api/1.0/',
+        data: { method: "getQuote", format: "jsonp", jsonp: "parseJson", lang: "en" },
+        jsonpCallback: "parseJson",
+        success: function(data){
+                $(".quote").text(data.quoteText);
+                $(".author").text(data.quoteAuthor);
+            }
+        })
+}
 
-    console.log(e);
+$('#get-a-sentence').on('click', function(){
+    getQuote();
 })
 
-$('#get-a-sentence').on('click',function(){
-
-	$.ajax({
-                url:   'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=parseQuote',
-                type:  'get',
-                headers: {
-                    'Content-Type':'charset:ISO-8859-1'
-                },
-                success:  function (response) {
-                        alert(response.split("|")[0]);
-                }
-        });
+$(document).on('ready',function(){
+    getQuote();
 })
-
-
-
-/*function(e){
-    console.log(getWordsNumber(e.target.value));
-})*/
