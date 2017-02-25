@@ -8,8 +8,7 @@ function getQuote(){
         data: { method: "getQuote", format: "jsonp", jsonp: "parseJson", lang: "en" },
         jsonpCallback: "parseJson",
         success: function(data){
-                $(".quote").text(data.quoteText);
-                $(".author").text(data.quoteAuthor);
+                $(".quote-container").html('<p class="quote grow-up">'+data.quoteText+'</p><p class="author grow-up">'+data.quoteAuthor+'</p>')
             }
         })
 }
@@ -18,6 +17,6 @@ $('#get-a-sentence').on('click', function(){
     getQuote();
 })
 
-$(document).on('ready',function(){
+$(document).ready(function(){
     getQuote();
 })

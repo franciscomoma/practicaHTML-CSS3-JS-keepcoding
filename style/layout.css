@@ -135,6 +135,7 @@ END OF PREVENT DEFAULT BEHAVIOR
 	display: flex;
 	width: 80%;
 	margin: auto;
+	max-width: 1024px;
 }
 
 .section-container{
@@ -149,6 +150,18 @@ END OF PREVENT DEFAULT BEHAVIOR
 
 .grid-row{
 	width: 100%;
+}
+
+img{
+	width:80;
+	margin: auto;
+}
+
+.quote-container{
+	display: block;
+	width: 100%;
+	max-width: 1024px;
+	margin: auto;
 }
 
 .grid-col-12{ width: 100%; display: block;}
